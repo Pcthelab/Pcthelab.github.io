@@ -1,0 +1,60 @@
+/* Pcthelab identity, shared with the GitHub profile. */
+:root{--signal:#ff304f;--text:#eeece7;--muted:#b0a6ac;--line:#34252d}
+.header.is-scrolled::before{background:#08090bf2;border-color:#382128}
+.hero-atmosphere{background:radial-gradient(ellipse at 82% 42%,#ff304f12,transparent 60%)}
+.hero-atmosphere::before{background-image:linear-gradient(#ff304f09 1px,transparent 1px),linear-gradient(90deg,#ff304f09 1px,transparent 1px)}
+.hero-atmosphere::after{background:radial-gradient(380px circle at var(--spot-x) var(--spot-y),#ff304f0b,transparent 80%)}
+.title-line.accent>span{background-image:linear-gradient(110deg,#ffa2b0,#ff5973 55%,#ff304f)}
+.hero-copy h1{font-weight:600}
+.button.primary{background:var(--signal);border-color:var(--signal);color:#08090b;box-shadow:0 8px 32px #ff304f18}
+.button:hover{background:#ff8a9d;color:#08090b}
+.button.primary:hover{box-shadow:0 8px 35px #ff304f30}
+.developer-card{background:#0c0b0e;border-color:#65303d;box-shadow:0 25px 70px #0006,0 0 65px #ff304f09}
+.developer-card:hover{border-color:#ae4258;box-shadow:0 25px 80px #0007,0 0 60px #ff304f12}
+.identity-signature{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 23px;border-bottom:1px solid #382128;background:repeating-linear-gradient(0deg,transparent 0 3px,#ffffff03 3px 4px),radial-gradient(ellipse at 95% 50%,#ff304f12,transparent 65%),#08090b;overflow:hidden}
+.identity-wordmark{min-width:0;display:flex;flex-direction:column;gap:8px}
+.identity-label,.identity-caption{font:.65rem/1.5 var(--mono);letter-spacing:.06em;color:#b0a0a6}
+.identity-wordmark strong{font:700 clamp(1.6rem,2.7vw,2.3rem)/1 var(--heading);letter-spacing:-.06em;color:var(--signal)}
+.identity-wordmark strong span{color:var(--text)}
+.identity-caption{letter-spacing:.17em;font-size:.6rem}
+.identity-mask{width:96px;height:108px;flex-shrink:0;position:relative;overflow:hidden}
+.identity-mask img{width:100%;height:100%;object-fit:contain}
+
+.code-tab{background:#171116;border-color:#382128}
+.terminal-output{background:linear-gradient(140deg,#110e13,#0c0b0e)}
+.terminal-prompt{background:#1c1219;border-color:#754251}
+.terminal-prompt button{background:#321a24}
+.terminal-prompt input::placeholder{color:#b7a4ad}
+.terminal-name{color:#eeece7}.terminal-local{color:#c08b97}
+.terminal-result a,.terminal-shortcuts button{background:#1c1219;border-color:#65404e}
+.terminal-shortcuts button[aria-pressed=true]{color:#08090b}
+.code-invitation{background:#ff304f05;border-color:#382128;color:#e5b4be}
+.code-invitation:hover{background:#ff304f10}
+.projects-section,.journey-section{background:#0e0d11;border-color:#292029}
+.project,.project.featured{background:#0b0b0e;border-color:#47303b}
+.project .project-image-button{background:radial-gradient(ellipse at 50% 20%,#321721,#191017 65%,#0e0c11)}
+.project .project-window{background:#0c0b0e90;border-color:#ff304f24;color:#dbb6c0}
+.window-dots{color:var(--signal)}.project-index{color:#cb8292}.project-meta{color:#c4a0ac}
+.project:hover h3{color:#ffdce3}.project:focus-within{border-color:var(--accent)}
+.project .project-peek{color:#08090b}
+.tag{color:#d3c3ca;border-color:#4c3541}.project:hover .tag{color:#f4dce3;border-color:#795064}
+.contact-paths .contact-path{background:linear-gradient(135deg,#1c121a,#0e0c11);border-color:#543442}
+.contact-paths .contact-path:is(:hover,:focus-visible){border-color:var(--signal)}
+.contact-path h3 span{border-color:#825265}.path-number{color:#d0a2af}.path-link{color:#e5b4c1}
+.dialog-image{background:#1b1119}
+@media(prefers-reduced-motion:no-preference){
+.identity-mask{animation:identity-arrive 1.2s var(--ease-out) both}
+
+.identity-wordmark strong{animation:identity-arrive .9s .1s var(--ease-out) both}
+
+@keyframes identity-arrive{from{opacity:0;filter:blur(5px);transform:translateY(8px)}to{opacity:1;filter:blur(0);transform:translateY(0)}}
+}
+@media(max-width:520px){.identity-signature{padding:15px 16px}.identity-wordmark strong{font-size:1.85rem}.identity-mask{width:82px;height:98px}.identity-label{font-size:.6rem}}
+/* Keep the identity and interactive controls inside a compact hero. */
+.hero-grid{padding-top:36px;padding-bottom:52px}
+.identity-signature{padding-block:12px}
+.identity-mask{width:80px;height:90px}
+.terminal-output{height:256px}
+.title-line.accent>span{background-image:linear-gradient(110deg,#ff7388,#ff304f 70%)}
+@media(max-width:800px){.terminal-output{height:280px}.hero-grid{padding-block:36px 45px}}
+@media(max-width:520px){.identity-mask{width:76px;height:88px}.terminal-output{height:290px}}

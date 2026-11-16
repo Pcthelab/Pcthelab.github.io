@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-140 -150 280 300"><title>Máscara animada da identidade Pcthelab</title><style>
+.mask-face{animation:mask-build 7s ease-in-out infinite}
+.mask-code{animation:mask-code 7s ease-in-out infinite}
+.mask-glitch{opacity:0;animation:mask-glitch 7s steps(1,end) infinite}
+.mask-scan{animation:mask-scan 7s linear infinite}
+@keyframes mask-build{0%,7%{clip-path:inset(0 0 100% 0);opacity:0}12%{opacity:1}35%,90%{clip-path:inset(0);opacity:1}100%{clip-path:inset(0);opacity:0}}
+@keyframes mask-code{0%,10%{opacity:.6}32%,90%{opacity:0}100%{opacity:.6}}
+@keyframes mask-glitch{0%,68%,73%,79%,100%{opacity:0;transform:translateX(0)}69%,77%{opacity:.7;transform:translateX(5px)}71%{opacity:.6;transform:translateX(-4px)}}
+@keyframes mask-scan{0%{transform:translateY(-90px);opacity:0}10%,70%{opacity:.55}90%,100%{transform:translateY(135px);opacity:0}}
+</style><defs><clipPath id="reveal"><rect x="-104" y="-113" width="208" height="240"/></clipPath><clipPath id="codeReveal"><rect x="-104" y="127" width="208" height="0"/></clipPath><clipPath id="maskSlice"><rect x="-112" y="-31" width="224" height="15"/><rect x="-112" y="48" width="224" height="8"/></clipPath></defs>
+<path d="M-119 117L-111-17Q-102-102 0-139Q102-102 111-17L119 117L71 90L0 135L-71 90Z" fill="#111115" stroke="#30232a"/>
+<path d="M-111 115L-97 16Q-90-80 0-119Q90-80 97 16L111 115M-81 96L0 126L81 96" fill="none" stroke="#543039" stroke-width="1"/>
+<g class="mask-code" fill="#ff304f" font-family="monospace" font-size="9" text-anchor="middle" opacity=".6"><text x="0" y="-84">01:/{}[]01:/{}[]01:/{}[]</text><text x="0" y="-74">/{}[]01:/{}[]01:/{}[]01:</text><text x="0" y="-64">[]01:/{}[]01:/{}[]01:/{}</text><text x="0" y="-54">1:/{}[]01:/{}[]01:/{}[]0</text><text x="0" y="-44">{}[]01:/{}[]01:/{}[]01:/</text><text x="0" y="-34">]01:/{}[]01:/{}[]01:/{}[</text><text x="0" y="-24">:/{}[]01:/{}[]01:/{}[]01</text><text x="0" y="-14">}[]01:/{}[]01:/{}[]01:/{</text><text x="0" y="-4">01:/{}[]01:/{}[]01:/{}[]</text><text x="0" y="6">/{}[]01:/{}[]01:/{}[]01:</text><text x="0" y="16">[]01:/{}[]01:/{}[]01:/{}</text><text x="0" y="26">1:/{}[]01:/{}[]01:/{}</text><text x="0" y="36">{}[]01:/{}[]01:/{}[</text><text x="0" y="46">]01:/{}[]01:/{}[</text><text x="0" y="56">:/{}[]01:/{}[]</text><text x="0" y="66">}[]01:/{}[]</text><text x="0" y="76">01:/{}[]0</text><text x="0" y="86">/{}[]0</text><text x="0" y="96">[]01</text></g>
+<g id="face" class="mask-face">
+<path d="M0-106C-49-108-82-83-84-34C-89 8-72 46-45 80C-29 101-10 115 0 119C10 115 29 101 45 80C72 46 89 8 84-34C82-83 49-108 0-106Z" fill="#eeece7"/>
+<path d="M0-106C-49-108-82-83-84-34C-89 8-72 46-45 80C-29 101-10 115 0 119L-13 85L-40 51L-57 9L-61-50L-42-89Z" fill="#aca7a6" opacity=".30"/>
+<path d="M0-106C49-108 82-83 84-34C89 8 72 46 45 80C29 101 10 115 0 119L13 85L40 51L57 9L61-50L42-89Z" fill="#b0a5a9" opacity=".16"/>
+<path d="M-71-45Q-40-76-13-46Q-37-55-69-37ZM71-45Q40-76 13-46Q37-55 69-37Z" fill="#111115"/>
+<path d="M-65-27Q-45-43-19-24Q-39-15-61-22ZM65-27Q45-43 19-24Q39-15 61-22Z" fill="#111115"/>
+<path d="M-59-26L-28-26M59-26L28-26" stroke="#ff304f" stroke-width="1.5" opacity="0.4312303108786757"/>
+<path d="M-8-26L-15 17Q-9 25 0 23Q9 25 15 17L8-26M-15 17L-7 14M15 17L7 14" fill="none" stroke="#8f8685" stroke-width="1.5"/>
+<path d="M-15 22Q0 31 15 22" fill="none" stroke="#1b181d" stroke-width="2"/>
+<path d="M-70 1Q-55 25-32 23M70 1Q55 25 32 23" fill="none" stroke="#b59191" stroke-width="4" opacity=".7"/>
+<path d="M-65 32Q-50 65 0 71Q50 65 65 32Q44 54 0 55Q-44 54-65 32Z" fill="#211b21"/>
+<path d="M0 38C-17 28-29 50-60 34C-44 64-15 56 0 48C15 56 44 64 60 34C29 50 17 28 0 38Z" fill="#111115"/>
+<path d="M-33 67Q0 82 33 67" fill="none" stroke="#988987" stroke-width="1.5"/>
+<path d="M-13 80Q0 89 13 80L7 106L0 118L-7 106Z" fill="#171219"/>
+<path d="M-75 11L-79 37M75 11L79 37" stroke="#84767b" fill="none"/>
+</g>
+
+<use href="#face" class="mask-glitch" clip-path="url(#maskSlice)"/><path class="mask-scan" d="M-105 -20H105" stroke="#ff304f" stroke-width="1"/>
+<g fill="none" stroke="#ff304f" stroke-width="1.3"><path d="M-128-102V-124H-106M106-124H128V-102M-128 92V114H-106M106 114H128V92"/></g></svg>

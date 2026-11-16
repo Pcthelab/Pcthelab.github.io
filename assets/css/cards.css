@@ -1,0 +1,91 @@
+/* Project surfaces: depth, directional light and a single reflection on entry. */
+.project {
+  position: relative;
+  isolation: isolate;
+  --card-rx: 0deg;
+  --card-ry: 0deg;
+  transition: transform .65s var(--ease-out), border-color .4s, box-shadow .5s;
+}
+.project::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(450px circle at var(--light-x, 50%) var(--light-y, 20%), #e4808f0d, transparent 70%);
+  transition: opacity .4s;
+}
+.project .project-image-stage::after {
+  content: '';
+  position: absolute;
+  inset: -30% -60%;
+  pointer-events: none;
+  background: linear-gradient(110deg, transparent 40%, #f7dbdf1c 50%, transparent 60%);
+  transform: translateX(-80%);
+  opacity: 0;
+}
+.project .project-image-stage img { transform: none; transition: transform .85s var(--ease-out); }
+.project .project-peek {
+  inset: auto 16px 16px auto;
+  width: auto;
+  height: auto;
+  padding: 9px 14px;
+  border-radius: 5px;
+  flex-direction: row;
+  gap: 18px;
+  z-index: 4;
+  transform: translateY(10px);
+}
+.project .project-peek > span { font-size: 1.1rem; }
+.project:focus-within { border-color: #c97582; box-shadow: 0 0 0 1px #e4808f35; }
+.project:focus-within .project-peek { opacity: 1; transform: none; }
+@media (hover:hover) and (pointer:fine) {
+  html[data-card-motion=on] .project.is-pointer-active {
+    transform: perspective(1400px) translateY(-8px) rotateX(var(--card-rx)) rotateY(var(--card-ry)) !important;
+    border-color: #bc707b;
+    box-shadow: 0 26px 60px #0005, 0 0 30px #e06f8008;
+  }
+  html[data-card-motion=on] .project.is-pointer-active::after { opacity: 1; display:block; }
+  html[data-card-motion=on] .project.is-pointer-active .project-image-stage img { transform: translate(var(--image-x,0px),var(--image-y,0px)) scale(1.045) !important; }
+  html[data-card-motion=on] .project.is-pointer-active .project-image-stage::after { display:block; animation: card-reflection 1s var(--ease-out) both !important; }
+  html[data-card-motion=on] .project.is-pointer-active .project-peek { display:flex; opacity: 1; transform: none; }
+  html[data-card-motion=on] .project.is-pointer-active .project-window { color: #e8bbc2; }
+}
+.project-toolbar {display:flex;align-items:center;justify-content:space-between;gap:18px;margin:-12px 0 28px;}
+.project-toolbar p {color:var(--muted);font-size:.875rem;margin:0;}
+.project-float {display:flex;align-items:center;justify-content:center;width:100%;height:100%;}
+html[data-card-motion=on] .project {transition:transform .45s var(--ease-out),border-color .4s,box-shadow .5s !important;}
+html[data-card-motion=on] .project .project-image-stage img {transition:transform .65s var(--ease-out) !important;}
+html[data-card-motion=on] .project-float {animation:project-float 6s ease-in-out infinite !important;animation-play-state:paused !important;}
+html[data-card-motion=on] .project.is-in-view .project-float {animation-play-state:running !important;}
+html[data-card-motion=on] .project:nth-child(2) .project-float {animation-delay:-2s !important;}
+html[data-card-motion=on] .project:nth-child(3) .project-float {animation-delay:-4s !important;}
+html[data-page-hidden=true] .project.is-in-view .project-float {animation-play-state:paused !important;}
+html[data-card-motion=on] .project.is-in-view:focus-within .project-float {animation-play-state:paused !important;}
+html[data-card-motion=off] .project, html[data-card-motion=off] .project:hover, html[data-card-motion=off] .project .project-image-stage img {transform:none !important;}
+@keyframes project-float {
+  0%,100% {transform:translateY(5px) rotate(-.45deg);}
+  50% {transform:translateY(-7px) rotate(.45deg);}
+}
+.contact-paths .contact-path {display:flex;flex-direction:column;position:relative;overflow:hidden;isolation:isolate;background:linear-gradient(135deg,#25191b,#181112);border:1px solid #53373b;transition:transform .45s var(--ease-out),border-color .35s,box-shadow .45s;}
+.contact-path::before {content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 90% 0,#e06f8018,transparent 65%);opacity:0;transition:opacity .45s;}
+.contact-paths .contact-path:is(:hover,:focus-visible) {border-color:#ba6874;box-shadow:0 18px 40px #0003;transform:translateY(-6px);}
+.contact-path:is(:hover,:focus-visible)::before {opacity:1;}
+.contact-path h3 span {display:grid;place-items:center;flex-shrink:0;width:38px;height:38px;border:1px solid #6b4147;border-radius:50%;font-size:1.2rem;transition:transform .45s var(--ease-out),background .35s,color .35s;}
+.contact-path:is(:hover,:focus-visible) h3 span {transform:rotate(45deg);background:var(--accent);color:#230e11;}
+.contact-path .path-link {align-self:flex-start;margin-top:auto;transition:color .35s,border-color .35s;}
+.contact-path:is(:hover,:focus-visible) .path-link {color:var(--accent);border-color:var(--accent);}
+@media(max-width:600px) {.project-toolbar {align-items:flex-start;flex-direction:column;gap:12px;}.contact-path h3 {gap:14px;}}
+@media(prefers-reduced-motion:reduce) {.contact-paths .contact-path:is(:hover,:focus-visible),.contact-path:is(:hover,:focus-visible) h3 span {transform:none;}}
+@keyframes card-reflection {
+  0% { transform: translateX(-70%); opacity: 0; }
+  25% { opacity: 1; }
+  100% { transform: translateX(70%); opacity: 0; }
+}
+@media (hover:none), (pointer:coarse), (prefers-reduced-motion:reduce) {
+  .project, .project:hover, .project .project-image-stage img { transform: none !important; }
+  .project::after, .project .project-image-stage::after { display: none; }
+  .project .project-peek { display: none; }
+}

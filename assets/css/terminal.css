@@ -1,0 +1,106 @@
+/* Phosphor terminal details, shared by every project. */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.developer-card [hidden]{display:none!important}
+.developer-card{position:relative;background:linear-gradient(135deg,#1e1718,#161011 70%);border-radius:9px;border-color:#854c5575;box-shadow:0 32px 90px #0006,0 0 70px #df697b08}
+.developer-card:focus-within{transform:none!important}
+.developer-card::before{content:'';position:absolute;inset:0;z-index:4;pointer-events:none;border-radius:inherit;background:repeating-linear-gradient(0deg,transparent 0 3px,#0000000a 3px 4px);opacity:.6}
+.code-tab{padding:12px 18px;gap:15px;border-bottom-color:#4d2c31;background:#e5839204}
+.terminal-views{display:flex;gap:15px}
+.terminal-view{border:0;background:none;color:#9d898c;font:.8rem var(--mono);padding:8px 0;position:relative}
+.terminal-view[aria-pressed=true]{color:var(--accent)}
+.terminal-view::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.terminal-view[aria-pressed=true]::after{transform:scaleX(1)}
+.terminal-local{font:.65rem var(--mono);color:#9a797e;letter-spacing:.06em;margin-left:auto}
+.terminal-output{height:256px;overflow:auto;overscroll-behavior:contain;padding:22px 23px 10px;font:.8rem/1.85 var(--mono);scrollbar-color:#583137 #171213;scrollbar-width:thin}
+.terminal-output p{margin:0 0 9px;white-space:pre-wrap;overflow-wrap:anywhere}
+.terminal-command{color:#cbbabd}
+.terminal-command>span{color:#a1767c;margin-right:7px}
+.terminal-name{font-size:1.18rem;letter-spacing:-.05em;color:#f7d7dc;line-height:1.5;padding-top:6px;text-shadow:0 0 16px #e37c8b12}
+.terminal-mark{color:var(--accent);margin-left:4px}
+.terminal-summary{color:#c3a7ab}
+.terminal-hint{color:#a0878b;font-size:.75rem;padding-top:8px}
+.terminal-hint span{color:var(--accent)}
+.terminal-prompt{display:flex;align-items:center;gap:10px;margin:0 20px 15px;padding:9px 0;border-bottom:1px solid #5e373d;transition:border-color .2s}
+.terminal-prompt:focus-within{border-color:var(--accent)}
+.terminal-prompt label{color:var(--accent);font:1rem var(--mono)}
+.terminal-prompt input{font:.8rem/1.5 var(--mono);background:transparent;color:#f5d0d6;border:0;padding:5px 0;width:100%;min-width:0;caret-color:var(--accent)}
+.terminal-prompt input::placeholder{color:#957479}
+.terminal-prompt input:focus-visible{outline:0}
+.terminal-prompt button{border:1px solid #542f35;border-radius:4px;background:#2b191c;color:var(--accent);min-width:36px;min-height:34px}
+.terminal-prompt button:hover{background:#402025}
+.terminal-shortcuts{display:flex;gap:8px;flex-wrap:wrap;padding:0 20px 20px}
+.terminal-shortcuts button{background:#231416;border:1px solid #513237;border-radius:4px;padding:5px 10px;font:.75rem var(--mono);color:#caaaaf;transition:border-color .2s,color .2s,background .2s}
+.terminal-shortcuts button:hover{border-color:#a35c67;color:var(--accent);background:#301a1d}
+.terminal-shortcuts button span{margin-left:6px}
+.terminal-result{padding:12px 0;border-top:1px solid #40272b;margin-top:10px;color:#c5a8ac}
+.terminal-result .terminal-command{font-size:.75rem;margin-bottom:8px}
+.terminal-result a{display:block;color:#e4808f;text-decoration:underline;text-underline-offset:4px;margin:5px 0;overflow-wrap:anywhere}
+.terminal-result .terminal-result-note{font-size:.75rem;color:#ab8a8f}
+.hero-atmosphere::before{background-size:44px 44px;opacity:.8}
+.eyebrow::before{content:'// ';color:#af626e}
+.hero-top .eyebrow::before{content:'> ';color:var(--accent)}
+.project{border-radius:9px;border-color:#503b3e}
+.project-image-button,.project[data-accent=blue] .project-image-button,.project[data-accent=purple] .project-image-button{background:radial-gradient(ellipse at 50% 25%,#472a2e,#2b1c1e 62%,#1d1315 100%)}
+.project[data-accent=blue] .project-image-button{background:radial-gradient(ellipse at 50% 25%,#372c2e,#211b1c 70%)}
+.project[data-accent=purple] .project-image-button{background:radial-gradient(ellipse at 50% 25%,#3e262a,#221315 70%)}
+.project-window{background:#170d0f52;border-bottom:1px solid #aa636e25;color:#c5a4a9;opacity:1;font-size:.7rem}
+.window-dots{color:#a96872}
+.project-image-button img{border-color:#c78d9640;box-shadow:0 18px 35px #0005,0 0 0 5px #20121438}
+.project-index{color:#d2919bb3}
+.project-meta{font-family:var(--mono);color:#b49ea1}
+.contact-path{border-radius:8px;border-color:#53373b}
+.path-number{font-size:.7rem;line-height:1.9;display:block;letter-spacing:.04em}
+.contact-path p{max-width:none}
+@media(max-width:1100px){.terminal-output{padding-inline:18px;font-size:.75rem}.terminal-local{display:none}.terminal-name{font-size:1.05rem}}
+@media(max-width:800px){.terminal-output{height:250px;font-size:.8rem}.developer-card::before{opacity:.35}.terminal-name{font-size:1.15rem}}
+@media(max-width:520px){.terminal-output{padding-inline:16px;font-size:.75rem;height:255px}.terminal-prompt{margin-inline:16px}.terminal-shortcuts{padding-inline:16px}.terminal-name{font-size:1.05rem}.terminal-views{gap:16px}.code-tab{padding-inline:16px}.path-number{font-size:.75rem}.project-window{font-size:.75rem}.hero-top .eyebrow{letter-spacing:.065em}}
+@media(prefers-reduced-motion:no-preference){.terminal-welcome{animation:terminal-enter .65s ease-out both}.terminal-welcome .terminal-name{animation:terminal-enter .7s .3s both}.terminal-welcome .terminal-summary{animation:terminal-enter .7s .45s both}.terminal-welcome .terminal-hint{animation:terminal-enter .7s .6s both}.terminal-mark{animation:terminal-caret .85s step-end 4}.terminal-result{animation:terminal-enter .25s ease-out}}
+@keyframes terminal-enter{from{opacity:0;translate:0 6px}to{opacity:1;translate:0 0}}
+@keyframes terminal-caret{0%,100%{opacity:1}50%{opacity:0}}
+
+/* Keep capture and caption in separate layout boxes at every breakpoint. */
+.project .project-image-button{display:flex;align-items:stretch;padding:0;aspect-ratio:auto}
+.project .project-window{position:relative;inset:auto;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:14px;min-height:44px;flex-shrink:0;padding:10px 18px;font-size:.75rem;z-index:2}
+.project-window>span:nth-child(2){overflow-wrap:anywhere;line-height:1.6;text-align:center}
+.project-image-stage{display:flex;align-items:center;justify-content:center;position:relative;width:100%;height:290px;min-height:0;padding:24px;overflow:hidden}
+.project .project-image-stage img{width:100%;height:100%;max-height:none;min-height:0;object-fit:contain;box-shadow:none;border:0}
+.featured .project-image-stage{height:350px;flex:1}
+.project-image-stage.image-missing{color:var(--accent);font:500 1.8rem var(--heading)}
+.project-index{pointer-events:none}
+.project h3{overflow-wrap:anywhere}
+
+/* A readable terminal: the newest response starts at the top. */
+.developer-card{transform:none;box-shadow:0 25px 70px #0005,0 0 0 1px #e4808f08}
+.developer-card::before{display:none}
+.code-tab{padding-block:12px;background:#211618}
+.terminal-view{font-size:.875rem}
+.terminal-local{font-size:.75rem}
+.terminal-output{height:304px;padding:24px;font-size:.875rem;line-height:1.75;background:linear-gradient(140deg,#1b1213,#171112)}
+.terminal-output:focus-visible{outline-offset:-3px}
+.terminal-name{font:500 1.5rem/1.4 var(--heading);letter-spacing:-.025em;padding-top:7px;color:#f9e4e7}
+.terminal-summary{font-size:.875rem;color:#d2b8bc;line-height:1.8}
+.terminal-hint{font-size:.8rem;line-height:1.8;color:#b4969b}
+.terminal-prompt{margin:12px 20px;padding:8px 10px;background:#29191b;border:1px solid #694046;border-radius:6px}
+.terminal-prompt:focus-within{outline:2px solid #e4808f35;outline-offset:2px}
+.terminal-prompt input{font-size:.875rem;min-height:34px}
+.terminal-prompt button{min-height:38px;min-width:42px;border-radius:5px;background:#3d2024}
+.terminal-shortcuts{gap:8px;padding-bottom:16px}
+.terminal-shortcuts button{font:.8rem var(--body);padding:7px 11px;min-height:36px;transition:color .2s,background .2s,border-color .2s}
+.terminal-shortcuts button[aria-pressed=true]{background:var(--accent);color:#200f12;border-color:var(--accent)}
+.terminal-result{border:0;padding:0;margin:0}
+.terminal-result .terminal-command{font-size:.8rem;color:#bb9197;padding-bottom:13px;border-bottom:1px solid #513539;margin-bottom:16px}
+.terminal-result .terminal-result-note{font-size:.8rem;line-height:1.7;color:#ba989d}
+.terminal-result a{padding:10px 13px;border:1px solid #513035;border-radius:5px;background:#2a171a;color:#ebcbd0;text-decoration:none;font:500 .875rem/1.5 var(--body);transition:background .2s,border-color .2s;display:flex;align-items:center;gap:12px;justify-content:space-between}
+.terminal-result a:hover{background:#402126;border-color:#99545e;color:#f6d6db}
+.terminal-result a small{display:block;font:.75rem/1.6 var(--mono);color:#bd989e;font-weight:400;margin-top:3px}
+.terminal-help-command{display:flex;align-items:center;justify-content:space-between;gap:14px;background:transparent;color:#d8bbbf;border:0;border-bottom:1px solid #462c30;width:100%;padding:9px 0;text-align:left;font:.8rem var(--body)}
+.terminal-help-command strong{font:500 .8rem var(--mono);color:var(--accent)}
+.terminal-help-command:hover{background:#372023}
+.terminal-input-help{font:.75rem/1.6 var(--body);color:#b29599;margin:0;padding:0 20px 16px;display:flex;justify-content:space-between;gap:12px}
+.terminal-input-help button{color:#c8a6ab;background:none;border:0;padding:0;font:inherit;text-decoration:underline;text-underline-offset:3px}
+.terminal-result h3{font:500 1rem var(--heading);color:#f5d6db;margin:16px 0 8px}
+.terminal-result .terminal-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.terminal-tags span{font:.75rem/1.6 var(--mono);border:1px solid #54373b;border-radius:3px;padding:3px 7px;color:#dcbdc2;background:#271719}
+@media(max-width:1100px){.terminal-output{padding:20px;font-size:.875rem}.terminal-name{font-size:1.35rem}}
+@media(max-width:800px){.project.featured .project-image-button{aspect-ratio:auto}.project .project-image-stage{height:280px;flex:none}.terminal-output{height:300px}}
+@media(max-width:520px){.project .project-image-stage{height:220px;padding:22px 18px}.project .project-window{padding:10px 14px;gap:10px}.terminal-output{padding:18px 16px;font-size:.875rem;height:310px}.terminal-name{font-size:1.3rem}.terminal-prompt{margin-inline:14px}.terminal-shortcuts{padding-inline:14px;gap:6px}.terminal-shortcuts button{padding-inline:10px}.terminal-input-help{padding-inline:16px;font-size:.75rem}.terminal-result a{padding:10px}.code-tab{gap:10px}}

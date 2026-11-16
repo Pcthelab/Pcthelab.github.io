@@ -1,0 +1,212 @@
+{
+  "profile": {
+    "name": "Juan Ygor Delgado",
+    "shortName": "Juan Delgado",
+    "handle": "Pcthelab",
+    "role": "Desenvolvimento de software",
+    "location": "Mogi Guaçu, SP",
+    "availability": "Aberto a estágio e projetos freelance",
+    "intro": "Sou estudante de Análise e Desenvolvimento de Sistemas na Fatec e desenvolvo soluções de software com foco em backend e aplicações full stack. Trabalho com Java e Spring Boot, C#/.NET, React e bancos SQL, unindo qualidade técnica a resultados práticos.",
+    "about": "Gosto de entender como as coisas funcionam — e de encontrar um jeito de fazê-las funcionar melhor. Na logística, criei automações em Excel que reduziram o tempo de separação de grandes pedidos de dois dias para menos de um, com ganho superior a 60% em produtividade. No desenvolvimento, construo APIs REST, aplicações web e projetos que conectam teoria e prática.",
+    "focus": "Meu foco é desenvolvimento backend com Java, Spring Boot e C#/.NET, incluindo APIs REST, segurança e persistência de dados. No OmniCash, conectei Java 21, Spring Boot, PostgreSQL e React em uma aplicação full stack. Também estudo qualidade de software, testes automatizados e práticas ágeis.",
+    "email": "contato.juandev@hotmail.com",
+    "github": "https://github.com/Pcthelab",
+    "linkedin": "https://www.linkedin.com/in/pcthelab",
+    "resume": "/documents/curriculo-juan.pdf"
+  },
+  "projects": [
+    {
+      "id": "omnicash",
+      "title": "OmniCash",
+      "category": "Aplicação full stack",
+      "year": "2026",
+      "summary": "Finanças pessoais, do lançamento à visão geral. Uma aplicação completa para organizar receitas, despesas e acompanhar o que acontece com o dinheiro.",
+      "description": "Plataforma de gestão financeira com API REST em camadas, autenticação e dados isolados por usuário. A interface reúne resumo financeiro, lançamentos, relatórios e exportação CSV, com navegação adaptada ao celular.",
+      "highlights": [
+        "API em Java e Spring Boot, com persistência JPA/Hibernate e PostgreSQL.",
+        "Autenticação JWT, senhas com BCrypt e isolamento de dados por usuário.",
+        "Interface React responsiva, filtros, gráficos e exportação de movimentações.",
+        "Testes automatizados e aplicação publicada com frontend na Netlify e backend no Render."
+      ],
+      "tags": [
+        "Java 21",
+        "Spring Boot",
+        "Spring Security",
+        "React",
+        "PostgreSQL"
+      ],
+      "image": "/assets/images/omnicash.png",
+      "imageAlt": "Captura do painel financeiro do OmniCash, com saldo, receitas, despesas e gráficos; versão anterior à separação das telas.",
+      "imageNote": "Captura de uma versão anterior; hoje, lançamentos e relatórios têm telas próprias.",
+      "repository": "https://github.com/Pcthelab/OmniCash",
+      "demo": "https://omnicash.netlify.app",
+      "featured": true,
+      "published": true,
+      "accent": "green"
+    },
+    {
+      "id": "cashflow",
+      "title": "CashFlow",
+      "category": "Exercício técnico · C#/.NET",
+      "year": "2026",
+      "summary": "Uma experiência prática com C#/.NET para implementar regras de negócio, transações financeiras e relatórios consolidados.",
+      "description": "Exercício técnico de gestão de fluxo de caixa com API REST em C#/.NET e frontend React com TypeScript. Foi meu contato pontual com essa stack, aplicando conceitos de APIs, persistência e regras de negócio a um projeto de escopo definido.",
+      "repository": "https://github.com/Pcthelab/CashFlowProject",
+      "demo": "",
+      "image": "/assets/images/cashflow.png",
+      "imageAlt": "Painel do CashFlow com saldo disponível, receitas, despesas e gráficos de fluxo por pessoa e distribuição financeira.",
+      "imageNote": "",
+      "accent": "green",
+      "tags": [
+        "C#",
+        ".NET 10",
+        "React",
+        "TypeScript"
+      ],
+      "highlights": [
+        "Validações de negócio para lançamentos financeiros e cadastro de pessoas.",
+        "Relatórios com receitas, despesas e saldo por pessoa.",
+        "Persistência com Entity Framework Core e SQLite.",
+        "Interfaces TypeScript para os contratos de dados da aplicação."
+      ],
+      "published": true,
+      "featured": false
+    },
+    {
+      "id": "campo-minado",
+      "title": "Campo Minado",
+      "category": "Jogo web · Java & JavaScript",
+      "year": "",
+      "summary": "O clássico no navegador, com lógica em Java, interface em HTML, CSS e JavaScript e quatro níveis de dificuldade.",
+      "description": "Campo Minado com interface web responsiva em HTML, CSS e JavaScript, conectada por uma API HTTP a um servidor Java. As regras e o estado da partida ficam no servidor, enquanto o navegador apresenta o tabuleiro, recebe as jogadas e acompanha o progresso. A experiência inclui quatro dificuldades, primeiro clique seguro e recordes por nível.",
+      "highlights": [
+        "Interface em HTML, CSS e JavaScript, com controles por mouse, teclado e toque.",
+        "Servidor Java com API HTTP e JSON para as jogadas e o estado da partida.",
+        "Quatro dificuldades, primeiro clique seguro e abertura em cascata das casas vazias.",
+        "Recordes por dificuldade no navegador e efeitos sonoros opcionais com Web Audio API."
+      ],
+      "tags": [
+        "Java",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "image": "/assets/images/campo-minado.png",
+      "imageAlt": "Tela inicial do Campo Minado com seleção de dificuldade, contador de minas, cronômetro e tabuleiro.",
+      "imageNote": "",
+      "repository": "https://github.com/Pcthelab/Campo-minado-web",
+      "demo": "",
+      "featured": false,
+      "published": true,
+      "accent": "green"
+    }
+  ],
+  "skills": [
+    {
+      "title": "Backend & arquitetura",
+      "items": [
+        "Java",
+        "Spring Boot",
+        "Spring Security",
+        "JWT",
+        "C#",
+        ".NET 10",
+        "APIs REST",
+        "Clean Architecture",
+        "Swagger / OpenAPI"
+      ]
+    },
+    {
+      "title": "Frontend",
+      "items": [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "HTML5",
+        "CSS3"
+      ]
+    },
+    {
+      "title": "Dados",
+      "items": [
+        "PostgreSQL",
+        "SQL Server",
+        "JPA / Hibernate",
+        "Entity Framework Core"
+      ]
+    },
+    {
+      "title": "Testes & qualidade",
+      "items": [
+        "JUnit 5",
+        "Testes unitários",
+        "Testes de API",
+        "Postman"
+      ]
+    },
+    {
+      "title": "Ferramentas & infraestrutura",
+      "items": [
+        "Git / GitHub",
+        "Maven",
+        "Docker",
+        "CI/CD",
+        "Render",
+        "Netlify"
+      ]
+    },
+    {
+      "title": "Operações & logística",
+      "items": [
+        "ERP Datasul",
+        "WMS Stockbox",
+        "Excel Avançado",
+        "Exportação",
+        "Controle de estoque"
+      ]
+    }
+  ],
+  "experience": {
+    "company": "Cortag",
+    "role": "Assistente operacional · Logística e exportação",
+    "period": "2024 — 2026",
+    "description": "Desenvolvi automações em Excel Avançado para roteirização e endereçamento logístico, reduzindo o tempo de separação de grandes pedidos de dois dias para menos de um e elevando a produtividade em mais de 60%. Operei ERP Datasul e WMS Stockbox na emissão de notas fiscais de exportação, conciliação e acuracidade de estoque, além de expedição, paletização e operação de empilhadeiras."
+  },
+  "education": {
+    "school": "Fatec",
+    "course": "Curso Superior de Tecnologia (CST) em Análise e Desenvolvimento de Sistemas",
+    "period": "Conclusão prevista · 06/2028"
+  },
+  "certifications": [
+    {
+      "title": "Itaú - Java com Inteligência Artificial",
+      "issuer": "DIO",
+      "detail": "45h · ago. 2026"
+    },
+    {
+      "title": "Java COMPLETO: Do Zero ao Profissional",
+      "issuer": "Udemy",
+      "detail": "77h · ago. 2026"
+    },
+    {
+      "title": "Scrum Fundamentals Certified",
+      "issuer": "SCRUMstudy",
+      "detail": "ago. 2026"
+    },
+    {
+      "title": "Kanban Essentials Certified (KEC)",
+      "issuer": "SCRUMstudy",
+      "detail": "nov. 2026"
+    },
+    {
+      "title": "OKR Fundamentals Certified (OKRFC)",
+      "issuer": "SCRUMstudy",
+      "detail": "nov. 2026"
+    },
+    {
+      "title": "SAFe Certified",
+      "issuer": "Simplilearn SkillUp",
+      "detail": "nov. 2026"
+    }
+  ]
+}
